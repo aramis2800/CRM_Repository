@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBCE1D85-E076-4D89-9F11-85A30B36E9A1}</ProjectGuid>
+    <ProjectTypeGuids>{32f31d43-81cc-4c15-9de6-3fc5453562b6};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sigma_SendOutgoingSms</RootNamespace>
+    <AssemblyName>Sigma_SendOutgoingSms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Sigma_SendOutgoingSms.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GSMCommServer">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaSignalRServer\SigmaSignalRServer\bin\GSMCommServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommShared">
+      <HintPath>E:\a.sefidkar\GSM\DotNet40\GSMCommShared.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommunication">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaSignalRServer\SigmaSignalRServer\bin\GSMCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Client">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Xrm.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Deployment">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Connector">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PDUConverter">
+      <HintPath>E:\a.sefidkar\GSM\DotNet40\PDUConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="SigmaXrm">
+      <HintPath>E:\a.sefidkar\Visual Studio 2015 Projects\SigmaXrm\SigmaXrm\bin\Debug\SigmaXrm.dll</HintPath>
+    </Reference>
+    <Reference Include="SMSPDULib">
+      <HintPath>..\..\..\..\..\Downloads\smspdulibsrc\bin\Debug\SMSPDULib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendOutgoingSms.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ILMerge.props" />
+    <None Include="packages.config" />
+    <None Include="Sigma_SendOutgoingSms.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILMergeOrder.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.props'))" />
+    <Error Condition="!Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets" Condition="Exists('..\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
